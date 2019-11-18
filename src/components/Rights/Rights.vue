@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div class="rights">这是rights组件</div>
 </template>
 
 <script>

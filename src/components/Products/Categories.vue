@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div class="categories">这是categories组件</div>
 </template>
 
 <script>

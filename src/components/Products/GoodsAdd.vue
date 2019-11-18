@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div class="goodsadd">这是goodsadd组件</div>
 </template>
 
 <script>

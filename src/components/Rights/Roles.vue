@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <div class="roles">这是roles组件</div>
 </template>
 
 <script>
