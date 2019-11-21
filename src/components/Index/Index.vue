@@ -5,7 +5,7 @@
         <div class="logo">
           <img src="../../assets/logo.png" alt />
         </div>
-        <h1>宇宙系统管理后台</h1>
+        <h1>宇宙无敌天地万物</h1>
         <div class="logout">
           <span>欢迎光临 ~</span>
           <a href="javascript:void(0);" @click="logout">退出</a>
@@ -56,13 +56,13 @@ export default {
   },
   computed: {
     defaultActive () {
-      return this.$route.path.substr(1)
+      return this.$route.path.substr(1).split('-')[0]
     }
   },
   async created () {
     let res = await this.$axios.get('menus')
     // console.log(res)
-    // console.log(this.$route.path.substr(1))
+    // console.log(this.$route.path.substr(1).split('-'))
     const { data, meta } = res
     if (meta.status === 200) {
       this.menusList = data

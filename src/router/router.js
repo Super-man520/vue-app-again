@@ -7,6 +7,8 @@ const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push (location) {
   return originalPush.call(this, location).catch(err => err)
 }
+
+// 按需加载
 const Login = () => import(/* webpackChunkName: 'index' */ '../components/Login/Login.vue')
 const Index = () => import(/* webpackChunkName: 'index' */ '../components/Index/Index.vue')
 const Users = () => import(/* webpackChunkName: 'users' */ '../components/Users/Users.vue')
@@ -30,7 +32,7 @@ const routes = [
       { path: '/users', name: 'users', component: Users },
       { path: '/categories', name: 'categories', component: Categories },
       { path: '/goods', name: 'goods', component: Goods },
-      { path: '/goods-add', name: 'goodsadd', component: GoodsAdd },
+      { path: '/goods-add', name: 'goods-add', component: GoodsAdd },
       { path: '/params', name: 'params', component: Params },
       { path: '/rights', name: 'rights', component: Rights },
       { path: '/roles', name: 'roles', component: Roles },

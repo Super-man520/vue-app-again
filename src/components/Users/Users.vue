@@ -9,7 +9,7 @@
     <!-- 搜索框 -->
     <div style="margin-top: 15px;width: 400px;display: inline-block">
       <el-input placeholder="请输入内容" v-model="query" class="input-with-select">
-        <el-button slot="append" icon="el-icon-search"></el-button>
+        <el-button slot="append" icon="el-icon-search" @click="queryUser"></el-button>
       </el-input>
     </div>
     <el-button type="success" plain class="add-user" @click="showAdd">添加用户</el-button>
@@ -292,13 +292,18 @@ export default {
     },
     // 表单颜色
     tableRowClassName ({ row, rowIndex }) {
-      console.log(rowIndex)
+      // console.log(rowIndex)
       if (rowIndex === 1) {
         return 'warning-row'
       } else if (rowIndex === 3) {
         return 'success-row'
       }
       return ''
+    },
+    // 查询用户
+    queryUser () {
+      this.getUserList()
+      this.pagenum = 1
     }
   }
 }
@@ -314,13 +319,21 @@ export default {
 .block {
   margin-top: 10px;
 }
+.el-table
+::v-deep.warning-row {
+  background: oldlace;
+}
+.el-table
+/deep/.success-row {
+    background: #f0f9eb;
+  }
 </style>
 <style>
-  .el-table .warning-row {
+  /* .el-table .warning-row {
     background: oldlace;
   }
 
   .el-table .success-row {
     background: #f0f9eb;
-  }
+  } */
 </style>

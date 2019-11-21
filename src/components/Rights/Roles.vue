@@ -202,7 +202,9 @@ export default {
     async sureAssignRole () {
       let rootIds = this.$refs.tree.getCheckedKeys()
       let nodeIds = this.$refs.tree.getHalfCheckedKeys()
+      // console.log(rootIds, nodeIds)
       const rids = [...rootIds, ...nodeIds].join(',')
+      // console.log(rids)
       // console.log(ids)
       let { meta } = await this.$axios.post(`roles/${this.roleId}/rights`, { rids })
       // console.log(res)
