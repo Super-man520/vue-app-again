@@ -1,9 +1,9 @@
 <template>
   <div class="goodsadd">
     <el-steps :active="active" finish-status="success">
-      <el-step title="步骤 1"></el-step>
-      <el-step title="步骤 2"></el-step>
-      <el-step title="步骤 3"></el-step>
+      <el-step title="步骤 1" description="基本信息"></el-step>
+      <el-step title="步骤 2" description="商品图片"></el-step>
+      <el-step title="步骤 3" description="商品描述"></el-step>
     </el-steps>
     <el-tabs tab-position="left" v-model="value" @tab-click="changeTab">
       <el-tab-pane label="用户管理" name="0">
